@@ -5,4 +5,5 @@ from ssd1306 import SSD1306_I2C
 oled= SSD1306_I2C(128, 64, i2c)
 
 	   
-chinese(oled,'江阳杰',0,0) 
+chinese(oled,'01234',0,0) 
+chinese(oled,'年月日',40,0) 
