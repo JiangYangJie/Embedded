@@ -1,0 +1,132 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'C:\Users\78677\Desktop\UI\alarm\alarm.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+import time
+
+class Ui_alarm(object):
+    def setupUi(self, alarm):
+        alarm.setObjectName("alarm")
+        alarm.resize(451, 212)
+        self.dockWidgetContents = QtWidgets.QWidget()
+        self.dockWidgetContents.setObjectName("dockWidgetContents")
+        self.label = QtWidgets.QLabel(self.dockWidgetContents)
+        self.label.setGeometry(QtCore.QRect(20, 50, 54, 12))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.dockWidgetContents)
+        self.label_2.setGeometry(QtCore.QRect(20, 100, 81, 16))
+        self.label_2.setObjectName("label_2")
+        self.spinBox = QtWidgets.QSpinBox(self.dockWidgetContents)
+        self.spinBox.setGeometry(QtCore.QRect(111, 100, 51, 22))
+        self.spinBox.setObjectName("spinBox")
+        self.spinBox_2 = QtWidgets.QSpinBox(self.dockWidgetContents)
+        self.spinBox_2.setGeometry(QtCore.QRect(180, 100, 42, 22))
+        self.spinBox_2.setObjectName("spinBox_2")
+        self.spinBox_3 = QtWidgets.QSpinBox(self.dockWidgetContents)
+        self.spinBox_3.setGeometry(QtCore.QRect(240, 100, 42, 22))
+        self.spinBox_3.setObjectName("spinBox_3")
+        self.spinBox_4 = QtWidgets.QSpinBox(self.dockWidgetContents)
+        self.spinBox_4.setGeometry(QtCore.QRect(300, 100, 42, 22))
+        self.spinBox_4.setObjectName("spinBox_4")
+        self.spinBox_5 = QtWidgets.QSpinBox(self.dockWidgetContents)
+        self.spinBox_5.setGeometry(QtCore.QRect(360, 100, 42, 22))
+        self.spinBox_5.setObjectName("spinBox_5")
+        self.comboBox = QtWidgets.QComboBox(self.dockWidgetContents)
+        self.comboBox.setGeometry(QtCore.QRect(120, 150, 69, 22))
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.pushButton = QtWidgets.QPushButton(self.dockWidgetContents)
+        self.pushButton.setGeometry(QtCore.QRect(230, 150, 75, 23))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.dockWidgetContents)
+        self.pushButton_2.setGeometry(QtCore.QRect(330, 150, 75, 23))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.lineEdit = QtWidgets.QLineEdit(self.dockWidgetContents)
+        self.lineEdit.setGeometry(QtCore.QRect(110, 50, 51, 20))
+        self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.dockWidgetContents)
+        self.lineEdit_2.setGeometry(QtCore.QRect(180, 50, 41, 20))
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.dockWidgetContents)
+        self.lineEdit_3.setGeometry(QtCore.QRect(240, 50, 41, 20))
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.dockWidgetContents)
+        self.lineEdit_4.setGeometry(QtCore.QRect(300, 50, 41, 20))
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.lineEdit_5 = QtWidgets.QLineEdit(self.dockWidgetContents)
+        self.lineEdit_5.setGeometry(QtCore.QRect(360, 50, 41, 20))
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.label_3 = QtWidgets.QLabel(self.dockWidgetContents)
+        self.label_3.setGeometry(QtCore.QRect(20, 20, 54, 12))
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.dockWidgetContents)
+        self.label_4.setGeometry(QtCore.QRect(110, 20, 54, 12))
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(self.dockWidgetContents)
+        self.label_5.setGeometry(QtCore.QRect(180, 20, 54, 12))
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(self.dockWidgetContents)
+        self.label_6.setGeometry(QtCore.QRect(240, 20, 54, 12))
+        self.label_6.setObjectName("label_6")
+        self.label_7 = QtWidgets.QLabel(self.dockWidgetContents)
+        self.label_7.setGeometry(QtCore.QRect(300, 20, 54, 12))
+        self.label_7.setObjectName("label_7")
+        self.label_8 = QtWidgets.QLabel(self.dockWidgetContents)
+        self.label_8.setGeometry(QtCore.QRect(360, 20, 54, 12))
+        self.label_8.setObjectName("label_8")
+        alarm.setWidget(self.dockWidgetContents)
+        self.spinBox.setRange(2019, 2030)
+        self.spinBox_2.setRange(1, 12)
+        self.spinBox_3.setRange(1, 31)
+        self.spinBox_4.setRange(0, 23)
+        self.spinBox_5.setRange(0, 59)
+
+        
+        self.lineEdit.setReadOnly(True)
+        self.lineEdit_2.setReadOnly(True)
+        self.lineEdit_3.setReadOnly(True)
+        self.lineEdit_4.setReadOnly(True)
+        self.lineEdit_5.setReadOnly(True)
+        
+        t=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        self.lineEdit.setText(t[:4])
+        self.lineEdit_2.setText(t[5:7])
+        self.lineEdit_3.setText(t[8:10])
+        self.lineEdit_4.setText(t[11:13])
+        self.lineEdit_5.setText(t[14:16])
+
+        self.retranslateUi(alarm)
+        QtCore.QMetaObject.connectSlotsByName(alarm)
+
+    def retranslateUi(self, alarm):
+        _translate = QtCore.QCoreApplication.translate
+        alarm.setWindowTitle(_translate("alarm", "DockWidget"))
+        self.label.setText(_translate("alarm", "now_time"))
+        self.label_2.setText(_translate("alarm", "alrrm_clock"))
+        self.comboBox.setItemText(0, _translate("alarm", "提交"))
+        self.comboBox.setItemText(1, _translate("alarm", "取消"))
+        self.pushButton.setText(_translate("alarm", "yes"))
+        self.pushButton_2.setText(_translate("alarm", "no"))
+        self.label_3.setText(_translate("alarm", "time"))
+        self.label_4.setText(_translate("alarm", "YEAR"))
+        self.label_5.setText(_translate("alarm", "MONTH"))
+        self.label_6.setText(_translate("alarm", "DAY"))
+        self.label_7.setText(_translate("alarm", "HOUR"))
+        self.label_8.setText(_translate("alarm", "MINUTE"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    alarm = QtWidgets.QDockWidget()
+    ui = Ui_alarm()
+    ui.setupUi(alarm)
+    alarm.show()
+    sys.exit(app.exec_())
+
