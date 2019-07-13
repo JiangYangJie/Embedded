@@ -2,7 +2,7 @@ import requests
 class TIME:
     def __init__(self):
         self.headers={
-                'api-key':'3vUCCcUopoOkPuu0ZCsMSUvfyOw=',
+                'api-key':'you api key',
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36",
                  }
         self.now_time=('','','','','')
@@ -20,8 +20,8 @@ class TIME:
 
 
     def get_alarm_time(self,year,month,day,hours,minute):
-        try:
-            Time=requests.get('http://api.heclouds.com/devices/532724988/datastreams/time',headers=self.headers)
+        try:#从onenet获取时间
+            Time=requests.get('http://api.heclouds.com/devices/'your id'/datastreams/time',headers=self.headers)
             print(Time)
             Year=Time.json()['data']['current_value'][:4]
             Month = Time.json()['data']['current_value'][5:7]

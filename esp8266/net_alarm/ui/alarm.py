@@ -28,7 +28,7 @@ class alarm(QDockWidget, Ui_alarm):
         self.timer.timeout.connect(self.Time)
         self.timer.start(10000)  # start(2000)表示设定时间间隔为2秒
         self.headers={
-        'api-key':'3vUCCcUopoOkPuu0ZCsMSUvfyOw=',
+        'api-key':'{}',
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36",
          }
     def Time(self):
@@ -40,7 +40,7 @@ class alarm(QDockWidget, Ui_alarm):
         self.lineEdit_5.setText(t[14:16])
     def Send(self, body):
         try:
-            a=requests.post('http://api.heclouds.com/devices/532724988/datapoints',json=body,headers=self.headers, timeout=2)
+            a=requests.post('http://api.heclouds.com/devices/‘{}’/datapoints',json=body,headers=self.headers, timeout=2)
             a.json()
         except:
             QMessageBox.warning(self,
