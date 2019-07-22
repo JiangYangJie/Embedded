@@ -1,2 +1,7 @@
 inc 头文件
 src 驱动文件
+cubemx   cubemx配置
+
+
+适用于128*160的TFT屏幕 驱动为sT7735s
+移植方法，直接将fun.c  ，fun.h，复制出来即可 font为字符脚本
