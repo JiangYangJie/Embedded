@@ -271,9 +271,9 @@ void showimage(uint16_t x,uint16_t y) //显示40*40图片
 {  
 	uint16_t i,j,k,da;
 	k=0;
-	for(i=0;i<160;i++)//y
+	for(i=0;i<y;i++)//y 根据自己图片大小改
 	{	
-		for(j=0;j<128;j++)//x
+		for(j=0;j<x;j++)//x 根据自己图片大小改
 		{
 			da=qqimage[k*2+1];//取颜色
 			da<<=8;//取颜色
